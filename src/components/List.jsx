@@ -1,6 +1,9 @@
-var React = require('react');
-var ListItem = require('./ListItem.jsx');
-var createReactClass = require('create-react-class');
+// var React = require('react');
+// var ListItem = require('./ListItem.jsx');
+// var createReactClass = require('create-react-class');
+import React from 'react';
+import ListItem from './ListItem.jsx';
+import createReactClass from 'create-react-class';
 
 var ingredients = [
     {"id": 1, "text": "ham"},

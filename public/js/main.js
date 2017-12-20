@@ -18961,57 +18961,85 @@ if (process.env.NODE_ENV === 'production') {
 
 }).call(this,require('_process'))
 },{"./cjs/react.development.js":26,"./cjs/react.production.min.js":27,"_process":20}],29:[function(require,module,exports){
-var React = require('react');
-var ListItem = require('./ListItem.jsx');
-var createReactClass = require('create-react-class');
+'use strict';
 
-var ingredients = [{ "id": 1, "text": "ham" }, { "id": 2, "text": "cheese" }, { "id": 3, "text": "eggs" }];
+var _react = require('react');
 
-var List = createReactClass({
+var _react2 = _interopRequireDefault(_react);
+
+var _ListItem = require('./ListItem.jsx');
+
+var _ListItem2 = _interopRequireDefault(_ListItem);
+
+var _createReactClass = require('create-react-class');
+
+var _createReactClass2 = _interopRequireDefault(_createReactClass);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var ingredients = [{ "id": 1, "text": "ham" }, { "id": 2, "text": "cheese" }, { "id": 3, "text": "eggs" }]; // var React = require('react');
+// var ListItem = require('./ListItem.jsx');
+// var createReactClass = require('create-react-class');
+
+
+var List = (0, _createReactClass2.default)({
     displayName: 'List',
 
-    render: function () {
+    render: function render() {
         var listItems = ingredients.map(function (item) {
-            return React.createElement(ListItem, { key: item.id, ingredient: item.text });
+            return _react2.default.createElement(_ListItem2.default, { key: item.id, ingredient: item.text });
         });
 
-        return React.createElement(
-            'ul',
-            null,
-            listItems
-        );
+        return _react2.default.createElement('ul', null, listItems);
     }
 });
 
 module.exports = List;
 
 },{"./ListItem.jsx":30,"create-react-class":2,"react":28}],30:[function(require,module,exports){
-var React = require('react');
-var createReactClass = require('create-react-class');
+'use strict';
 
-var ListItem = createReactClass({
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _createReactClass = require('create-react-class');
+
+var _createReactClass2 = _interopRequireDefault(_createReactClass);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// var React = require('react');
+// var createReactClass = require('create-react-class');
+var ListItem = (0, _createReactClass2.default)({
     displayName: 'ListItem',
 
-    render: function () {
-        return React.createElement(
-            'li',
-            null,
-            React.createElement(
-                'h4',
-                null,
-                this.props.ingredient
-            )
-        );
+    render: function render() {
+        return _react2.default.createElement('li', null, _react2.default.createElement('h4', null, this.props.ingredient));
     }
 });
 
 module.exports = ListItem;
 
 },{"create-react-class":2,"react":28}],31:[function(require,module,exports){
-var React = require('react');
-var ReactDOM = require('react-dom');
-var List = require('./components/List.jsx');
+'use strict';
 
-ReactDOM.render(React.createElement(List, null), document.getElementById('ingredients'));
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require('react-dom');
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _List = require('./components/List.jsx');
+
+var _List2 = _interopRequireDefault(_List);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_reactDom2.default.render(_react2.default.createElement(_List2.default, null), document.getElementById('ingredients')); // var React = require('react');
+// var ReactDOM = require('react-dom');
+// var List = require('./components/List.jsx');
 
 },{"./components/List.jsx":29,"react":28,"react-dom":25}]},{},[31]);
